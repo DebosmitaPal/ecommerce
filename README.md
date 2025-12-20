@@ -1,128 +1,106 @@
 # 🛒 E-Commerce Website (MERN Stack)
 
-A full-stack E-Commerce Web Application built using React (Vite) for the frontend and Node.js + Express for the backend.
-The project supports product browsing, cart management, user authentication, and scalable backend APIs.It
-also has a feature of comparing prices from websites like flipkart and amazon.
+A full‑stack E‑Commerce web application built with React (Vite) for the frontend and Node.js + Express for the backend. It supports product browsing, cart management, user authentication, and price comparisons (Amazon / Flipkart scraping).
 
-📁 Project Structure
+---
+
+## ✨ Features
+
+- Product listing, category pages, and product details
+- Add to cart, remove from cart, and persistent cart/wishlist for authenticated users
+- Global state managed via React Context API
+- Responsive UI (mobile & desktop)
+- Backend RESTful APIs (Node.js + Express)
+- Price comparison via web scraping (Amazon & Flipkart)
+- Newsletter subscription (email integration)
+
+---
+
+## 📁 Project Structure
+
 ```
 ecommerce/
-│
-├── backend/
-│   ├── node_modules/
-│   ├── .env                # Environment variables
-│   ├── .gitignore
-│   ├── package.json
-│   ├── package-lock.json
-│   └── server.js           # Express server entry point
-│
-├── frontend/
-│   ├── node_modules/
-│   ├── public/
-│   │   ├── images/          # Static images
-│   │   └── vite.svg
-│   │
-│   ├── src/
-│   │   ├── assets/          # Images, icons, static assets
-│   │   ├── components/      # Reusable UI components
-│   │   ├── contexts/        # Context API (Cart, Auth, etc.)
-│   │   ├── pages/           # Page-level components
-│   │   ├── App.css
-│   │   ├── App.jsx          # Main App component
-│   │   ├── index.css
-│   │   └── main.jsx         # Vite entry file
-│   │
-│   ├── .gitignore
-│   ├── package.json
-│   └── package-lock.json
-│
-└── README.md               # Project documentation
+├─ backend/        # Express API, MongoDB models, auth, scraping logic
+├─ frontend/       # Vite + React app (components, pages, assets)
+└─ README.md       # Project documentation
 ```
-## ✨ Features
-Frontend
 
-- ** Product listing and category pages
+---
 
-- ** Add to cart & remove from cart functionality
+## 🛠 Tech Stack
 
-- ** Context API for global state management
+- Frontend: React, Vite
+- Backend: Node.js, Express
+- Database: MongoDB (planned)
+- Other: Axios, Cheerio (scraping), JWT, Nodemailer
 
-- ** Responsive UI for mobile & desktop
+---
 
-Built with React + Vite
-Backend
+## ✅ Prerequisites
 
-RESTful APIs using Node.js & Express
+- Node.js v16+ and npm
+- MongoDB (local or Atlas)
 
-Environment variable support using .env
+---
 
-Modular and scalable backend setup
+## 🚀 Installation & Run
 
-Ready for database integration (MongoDB)
+Clone the repository:
 
-### 🚀 Getting Started
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js (v16+ recommended)
-
-npm
-
-MongoDB (local or Atlas)
-🔧 Installation & Setup
-1️⃣ Clone the Repository
-git clone <your-repository-url>
+```bash
+git clone <https://github.com/DebosmitaPal/ecommerce.git>
 cd ecommerce
-2️⃣ Backend Setup
+```
+
+### Backend
+
+```bash
 cd backend
 npm install
-Create a .env file inside backend/:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-Run backend server:
+# start the server (npm start will run `node server.js` by default)
 npm start
-Backend will run on:
-http://localhost:5000
-3️⃣ Frontend Setup
+```
+
+The backend defaults to http://localhost:5000 (configurable via `PORT`).
+
+### Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
-Frontend will run on:
-http://localhost:5173
-🧩 Main Components & Pages
+```
 
-Home Page – Displays featured products
+The frontend uses Vite and typically runs on http://localhost:5173.
 
-Product Page – Product details
+> Tip: open backend and frontend terminals in parallel to run both locally.
 
-Cart Page – View and manage cart items
+---
 
-Navbar / Footer – Global layout components
+## 🔐 Environment Variables
 
-Context Providers – Cart & state management
-🔐 Environment & Security
+Create a `.env` file in `backend/` with at least the following values:
 
-.env files are used for sensitive data
+```
+PORT=5000
+MONGO_URL=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+EMAIL_USER=you@example.com
+EMAIL_PASS=your_email_password
+```
 
-.gitignore excludes:
+> Keep `.env` out of version control (it's already included in `.gitignore`).
 
-node_modules
+---
 
-.env files
+## 🧩 Main Components & Pages
 
-Backend is structured to easily add authentication & authorization
-📌 Brief Description
+- Home — featured products
+- Product — details and compare prices
+- Cart — manage cart items
+- Wishlist — saved items
+- Auth — signup & login
+- Navbar & Footer — site layout
+- Context Providers — cart & auth state persistence
 
-This E-Commerce website allows users to browse products, add them to a cart, and manage their shopping experience through a clean and responsive interface.
-The backend is designed to be scalable and can be extended with authentication, payment gateways, and order management features.
-🛠 Tech Stack
-
-Frontend: React, Vite, CSS
-
-Backend: Node.js, Express
-
-Database: MongoDB (optional / planned)
-
-Version Control: Git & GitHub
+---
