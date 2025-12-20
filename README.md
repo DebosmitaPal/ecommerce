@@ -1,10 +1,11 @@
-🛒 E-Commerce Website (MERN Stack)
+# 🛒 E-Commerce Website (MERN Stack)
 
 A full-stack E-Commerce Web Application built using React (Vite) for the frontend and Node.js + Express for the backend.
 The project supports product browsing, cart management, user authentication, and scalable backend APIs.It
 also has a feature of comparing prices from websites like flipkart and amazon.
 
 📁 Project Structure
+```
 ecommerce/
 │
 ├── backend/
@@ -36,17 +37,17 @@ ecommerce/
 │   └── package-lock.json
 │
 └── README.md               # Project documentation
-
-✨ Features
+```
+## ✨ Features
 Frontend
 
-Product listing and category pages
+- ** Product listing and category pages
 
-Add to cart & remove from cart functionality
+- ** Add to cart & remove from cart functionality
 
-Context API for global state management
+- ** Context API for global state management
 
-Responsive UI for mobile & desktop
+- ** Responsive UI for mobile & desktop
 
 Built with React + Vite
 Backend
@@ -59,12 +60,12 @@ Modular and scalable backend setup
 
 Ready for database integration (MongoDB)
 
-🚀 Getting Started
-Prerequisites
+### 🚀 Getting Started
+### Prerequisites
 
 Make sure you have the following installed:
 
-Node.js (v16+ recommended)
+- Node.js (v16+ recommended)
 
 npm
 
