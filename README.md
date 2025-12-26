@@ -104,3 +104,4 @@ EMAIL_PASS=your_email_password
 - Context Providers — cart & auth state persistence
 
 ---
+- Developed by Debosmita
